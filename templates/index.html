@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Staj calc</title>
+    </head>
+    <body>
+        "31/12/10, 27/02/16":
+        <form action="/" method="post"> 
+            <input type="text" name="expression1" />
+            <input type="submit" value="calc" />
+        </form>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                Results ю:
+                <pre>
+                    {% for message in messages %}
+{{ message }}
+                    {% endfor %}
+                </pre>
+            {% endif %}
+        {% endwith %}
+    </body>
+</html>
